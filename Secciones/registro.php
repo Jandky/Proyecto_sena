@@ -107,6 +107,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 
-    
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Detectar qué dice la URL (¿?tab=login o ¿?tab=registro?)
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab');
+
+    // 2. Identificar los contenedores de tus formularios
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    // 3. Lógica de visualización automática
+    if (tab === 'login') {
+        if(loginForm) loginForm.style.display = 'block';
+        if(registerForm) registerForm.style.display = 'none';
+    } else {
+        // Por defecto o si es 'registro', muestra el de registro
+        if(loginForm) loginForm.style.display = 'none';
+        if(registerForm) registerForm.style.display = 'block';
+    }
+});
 </body>
 </html>

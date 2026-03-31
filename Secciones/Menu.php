@@ -58,10 +58,10 @@ $nombre_usuario = isset($_SESSION['usuario_nombre']) ? $_SESSION['usuario_nombre
                 <li><a class="dropdown-item text-danger fw-bold" href="logout.php"><i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión</a></li>
             </ul>
         </div>
-    <?php else: ?>
-        <a href="registro.php?tab=login" class="btn btn-outline-danger btn-sm fw-bold me-2">Entrar</a>
-        <a href="registro.php?tab=registro" class="btn btn-danger btn-sm fw-bold">Unirme</a>
-    <?php endif; ?>
+            <?php else: ?>
+                <a href="Login.html" class="btn btn-outline-danger btn-sm fw-bold me-2">Entrar</a>
+                <a href="registro.php" class="btn btn-danger">Unirme</a>
+            <?php endif; ?>
 </div>
     </div>
 </nav>

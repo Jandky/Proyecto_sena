@@ -18,7 +18,7 @@
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand fw-bold" href="../Comidas Rapidas.html" style="color:#bc4421;">Onlyfast</a>
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="Menu.html">Volver al Menú</a></li>
+                <li class="nav-item"><a class="nav-link" href="Menu.php">Volver al Menú</a></li>
             </ul>
             <a href="Carrito.html" class="icon-link position-relative">
                 <i class="bi bi-cart"></i>
