@@ -1,0 +1,128 @@
+/* ===== LOGIN STYLE - SECUENCIA EXACTA ONLYFAST ===== */
+
+:root {
+  /* Paleta de colores extraída de tu imagen */
+  --rojo-texto: #b03a02;         /* Guinda/Rojo oscuro para el texto */
+  --naranja-principal: #ff7f00;  /* Naranja brillante del logo */
+  --crema-hover: #ffe9c6;        /* Naranja crema suave para el fondo del hover */
+  --amarillo-banner: #ffe29f;    /* Amarillo claro del banner superior */
+  --bg-web: #fdfdfd;             /* Fondo gris muy claro de tu web */
+  --borde-búsqueda: #f3c538;     /* El amarillo del borde de búsqueda */
+}
+
+body {
+  background-color: var(--bg-web); /* Fondo limpio */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Banner Superior */
+.top-banner {
+  background-color: var(--amarillo-banner);
+  color: var(--rojo-texto);
+  text-align: center;
+  font-weight: bold;
+  padding: 12px;
+  font-size: 1.1rem;
+}
+
+/* La Card del Login (Adaptada a tu diseño de bordes) */
+.login-wrapper {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  background: white;
+  border: 1px solid var(--borde-búsqueda);
+  border-radius: 18px; /* Mismo radio que tu búsqueda */
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  box-shadow: 0 4px 15px rgba(211, 84, 0, 0.05);
+}
+
+/* Panel Izquierdo (Promo) - Usando el color de tu banner */
+.panel-left {
+  background-color: var(--amarillo-banner);
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid var(--borde-búsqueda);
+}
+
+.brand-name {
+  color: var(--naranja-principal);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.brand-name span {
+  color: var(--rojo-texto);
+}
+
+/* Tabs: Login / Registro - USANDO TU EFECTO HOVER CREMA */
+.tabs-login {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: none;
+  color: var(--rojo-texto); /* Color de texto inicial */
+  font-weight: 600;
+  transition: all 0.3s;
+  border-radius: 8px; /* Un poco de radio para el recuadro */
+}
+
+/* El efecto que me pediste */
+.tab-btn:hover {
+  background-color: var(--crema-hover); /* EL COLOR NARANJA CREMA */
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background-color: var(--crema-hover); /* EL COLOR NARANJA CREMA */
+  color: var(--naranja-principal); /* El texto cambia a naranja para el activo */
+  font-weight: bold;
+}
+
+/* Botones Principales (como el "Pide Aquí" o Iniciar Sesión) */
+.btn-onlyfast {
+  background-color: white;
+  color: var(--rojo-texto) !important;
+  border: 2px solid var(--rojo-texto);
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  margin-top: 15px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* También aquí aplicamos tu hover crema */
+.btn-onlyfast:hover {
+  background: var(--crema-hover); /* EL COLOR NARANJA CREMA */
+  border-color: var(--crema-hover);
+  color: var(--naranja-principal) !important;
+}
+
+/* Inputs con el borde amarillo de tu búsqueda */
+.input-icon-group input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid var(--borde-búsqueda);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}

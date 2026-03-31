@@ -1,9 +1,11 @@
 // js/menu.js
 
-// Cargar carrito desde localStorage o iniciar vacío
+// ==========================================
+// 1. LÓGICA DEL CARRITO (TU CÓDIGO ORIGINAL)
+// ==========================================
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Actualiza número del carrito
 function updateCartBadge() {
   const badge = document.getElementById("cart-count");
   if (!badge) return;
@@ -11,13 +13,11 @@ function updateCartBadge() {
   badge.textContent = totalQty;
 }
 
-// Guarda carrito
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartBadge();
 }
 
-// Agregar producto (si existe, suma cantidad)
 function addToCart(name, price) {
   const priceNum = parseInt(price, 10) || 0;
   const existing = cart.find(p => p.name === name);
@@ -28,6 +28,52 @@ function addToCart(name, price) {
   }
   saveCart();
 }
+
+// ==========================================
+// 2. NUEVA LÓGICA PARA LOGIN Y REGISTRO
+// ==========================================
+
+// Función para cambiar entre pestañas de Login y Registro
+function mostrarTab(tabId, elemento) {
+    const loginForm = document.getElementById('form-login');
+    const registroForm = document.getElementById('form-registro');
+
+    if (tabId === 'login') {
+        loginForm.classList.remove('d-none');
+        registroForm.classList.add('d-none');
+    } else {
+        registroForm.classList.remove('d-none');
+        loginForm.classList.add('d-none');
+    }
+
+    // Estética de los botones (Poner activo el que clicamos)
+    const botones = document.querySelectorAll('.tab-btn');
+    botones.forEach(btn => {
+        btn.classList.remove('active', 'btn-dark');
+        btn.classList.add('btn-outline-dark');
+    });
+
+    elemento.classList.add('active', 'btn-dark');
+    elemento.classList.remove('btn-outline-dark');
+}
+
+// Función para ver/ocultar la contraseña (el ojito)
+function togglePass(idInput, boton) {
+    const input = document.getElementById(idInput);
+    const icono = boton.querySelector('i');
+    
+    if (input.type === "password") {
+        input.type = "text";
+        icono.classList.replace('bi-eye', 'bi-eye-slash');
+    } else {
+        input.type = "password";
+        icono.classList.replace('bi-eye-slash', 'bi-eye');
+    }
+}
+
+// ==========================================
+// 3. INICIALIZACIÓN AL CARGAR EL DOM
+// ==========================================
 
 document.addEventListener("DOMContentLoaded", () => {
   updateCartBadge();

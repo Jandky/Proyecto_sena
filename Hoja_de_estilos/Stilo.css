@@ -147,3 +147,7 @@ form[role="search"], .d-flex.align-items-center {
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
+
+.panel-left {
+    flex: 1;
+}
