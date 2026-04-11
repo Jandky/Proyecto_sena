@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 
- <script>
+<script>
 document.addEventListener("DOMContentLoaded", function() {
     // 1. Detectar qué dice la URL (¿?tab=login o ¿?tab=registro?)
     const params = new URLSearchParams(window.location.search);
