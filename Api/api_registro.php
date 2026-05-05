@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Cifrado de seguridad
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
-    // Consulta con tus columnas específicas
+    // Consulta con columnas específicas
     $sql = "INSERT INTO usuario (nombres, apellidos, email, password_hash, telefono) 
             VALUES ('$nombres', '$apellidos', '$email', '$password_hash', '$telefono')";
 

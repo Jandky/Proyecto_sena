@@ -1,0 +1,171 @@
+/* ============================================================
+   ESTILOS EXCLUSIVOS PARA EL MENÚ ONLYFAST
+   UNIFICADOS CON LA PALETA GENERAL DEL SITIO
+   ============================================================ */
+
+:root {
+    --onlyfast-primary: #bc4421;
+    --onlyfast-secondary: #ffc107;
+    --onlyfast-beige: #fff3d0;
+    --onlyfast-text: #802010;
+    --onlyfast-white: #ffffff;
+    --onlyfast-border: #f0e2d8;
+}
+
+/* 1. BARRA DE CATEGORÍAS */
+.sticky-categories {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1020 !important;
+    background-color: #ffffff !important;
+    border-bottom: 2px solid #fff3d0 !important;
+    padding: 14px 0 !important;
+}
+
+.sticky-categories .container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 12px !important;
+    overflow-x: auto !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.sticky-categories .container a,
+.sticky-categories .container a:link,
+.sticky-categories .container a:visited {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 18px !important;
+    border: 2px solid #bc4421 !important;
+    border-radius: 10px !important;
+    background-color: #fff8f2 !important;
+    color: #bc4421 !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
+    transition: all 0.25s ease !important;
+}
+
+.sticky-categories .container a:hover,
+.sticky-categories .container a:focus,
+.sticky-categories .container a:active {
+    background-color: #bc4421 !important;
+    color: #ffffff !important;
+    border-color: #bc4421 !important;
+    text-decoration: none !important;
+}
+
+.btn-cat-pill {
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    padding: 8px 18px;
+    border: 1px solid var(--onlyfast-border);
+    color: var(--onlyfast-text);
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-cat-pill:hover,
+.btn-cat-pill:focus {
+    background-color: var(--onlyfast-primary);
+    color: var(--onlyfast-white);
+    border-color: var(--onlyfast-primary);
+}
+
+/* 2. TÍTULOS DE SECCIONES */
+.cat-titulo {
+    color: var(--onlyfast-primary);
+    font-weight: 800;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* 3. TARJETAS DE PRODUCTO */
+.card-onlyfast {
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--onlyfast-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-onlyfast:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(188, 68, 33, 0.12);
+}
+
+.card-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 4. PRECIO Y BOTÓN */
+.precio-only {
+    color: var(--onlyfast-primary);
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.btn-add-only {
+    background-color: var(--onlyfast-primary);
+    color: var(--onlyfast-white);
+    border-radius: 8px;
+    padding: 5px 12px;
+    border: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn-add-only:hover {
+    background-color: var(--onlyfast-secondary);
+    color: #000;
+}
+
+/* 5. ICONOS */
+.icon-link {
+    color: var(--onlyfast-primary) !important;
+    font-size: 1.3rem;
+    margin-left: 4px;
+    margin-right: 4px;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.icon-link:hover {
+    color: var(--onlyfast-secondary) !important;
+}
+
+/* 6. BADGE CARRITO */
+.cart-badge {
+    font-size: 0.85rem;
+    padding: 1px 6px;
+}
+
+.franja-superior {
+    background-color: var(--onlyfast-beige);
+    color: var(--onlyfast-text);
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.logo-onlyfast {
+    color: var(--onlyfast-primary) !important;
+}
